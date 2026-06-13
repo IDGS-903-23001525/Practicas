@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://tools.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A3175"
+    android:fillViewport="true"
+    tools:context="Practica4.ResistenciasActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center_horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="#A6E22E"
+            android:layout_marginBottom="16dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Calcular Valor de resistencias"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:padding="14dp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="3dp"
+            android:layout_marginBottom="20dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:scaleType="fitCenter"
+                android:background="#FFFFFF"
+                android:src="@drawable/resistencia"
+                android:contentDescription="Tabla de resistencias" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="6dp"
+            android:layout_marginBottom="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="10dp">
+                <Spinner
+                    android:id="@+id/spinnerBanda1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+                <TextView
+                    android:id="@+id/tvResultadoBanda1"
+                    android:layout_width="90dp"
+                    android:layout_height="36dp"
+                    android:background="#FF0000"
+                    android:textColor="#FFFFFF"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="6dp"
+            android:layout_marginBottom="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="10dp">
+                <Spinner
+                    android:id="@+id/spinnerBanda2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+                <TextView
+                    android:id="@+id/tvResultadoBanda2"
+                    android:layout_width="90dp"
+                    android:layout_height="36dp"
+                    android:background="#FF0000"
+                    android:textColor="#FFFFFF"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="6dp"
+            android:layout_marginBottom="16dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="10dp">
+                <Spinner
+                    android:id="@+id/spinnerMultiplicador"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+                <TextView
+                    android:id="@+id/tvResultadoMultiplicador"
+                    android:layout_width="90dp"
+                    android:layout_height="36dp"
+                    android:background="#CD7F32"
+                    android:textColor="#FFFFFF"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_vertical">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tolerancia"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000" />
+                <RadioGroup
+                    android:id="@+id/radioGroupTolerancia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:id="@+id/rbOro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="oro"
+                        android:textColor="#000000"
+                        android:checked="true"/>
+                    <RadioButton
+                        android:id="@+id/rbPlata"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="plata"
+                        android:textColor="#000000"/>
+                </RadioGroup>
+            </LinearLayout>
+            <View
+                android:id="@+id/viewColorTolerancia"
+                android:layout_width="90dp"
+                android:layout_height="36dp"
+                android:background="#FFD700" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnCalcular"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#A6E22E"
+            android:text="calcular"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="4dp">
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:stretchColumns="1">
+                <TableRow android:layout_marginBottom="8dp">
+                    <TextView
+                        android:text="valor ohm"
+                        android:textSize="16sp"
+                        android:textColor="#555555" />
+                    <TextView
+                        android:id="@+id/tvValorOhm"
+                        android:text="0"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:gravity="end" />
+                </TableRow>
+                <TableRow android:layout_marginBottom="8dp">
+                    <TextView
+                        android:text="valor maximo"
+                        android:textSize="16sp"
+                        android:textColor="#555555" />
+                    <TextView
+                        android:id="@+id/tvValorMaximo"
+                        android:text="0"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:gravity="end" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:text="valor minimo"
+                        android:textSize="16sp"
+                        android:textColor="#555555" />
+                    <TextView
+                        android:id="@+id/tvValorMinimo"
+                        android:text="0"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:gravity="end" />
+                </TableRow>
+            </TableLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

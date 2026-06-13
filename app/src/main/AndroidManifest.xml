@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PracticasSegundoParcial">
         <activity
+            android:name=".Practica5.CinepolisActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Practica4.ResistenciasActivity"
+            android:exported="false" />
+        <activity
             android:name=".Practica2.ResultadoTrianguloActivity"
             android:exported="false" />
         <activity

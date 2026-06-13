@@ -6,7 +6,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3E54DE"
+    android:background="#1A3175"
     tools:context="Practica2.Practica2Activity">
 
     <LinearLayout
